@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Memorándum Ejecutivo - Planta Desaladora Binacional</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- 1. PORTADA -->
+            <section data-background-image="assets/desert_ocean.png" data-background-transition="zoom">
+                <div class="glass-panel">
+                    <span class="badge"><i class="fa-solid fa-file-signature"></i> Memorándum Ejecutivo</span>
+                    <h1 class="title-main">Colaboración Binacional Estratégica</h1>
+                    <p class="subtitle" style="color: var(--primary-color);">Proyecto Planta Desaladora Puerto Peñasco
+                    </p>
+
+                    <div class="grid-2"
+                        style="margin-top: 3rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 2rem;">
+                        <div>
+                            <p class="text-md"><strong>De:</strong> Acon Consulting | Carlos Contreras</p>
+                            <p class="text-md"><strong>Fecha:</strong> 10 de marzo de 2026</p>
+                        </div>
+                        <div>
+                            <p class="text-md"><strong>Para:</strong></p>
+                            <ul style="font-size: 1rem; list-style: none; padding: 0; color: #334155;">
+                                <li>🏛️ Gob. Alfonso Durazo Montaño (Estado de Sonora)</li>
+                                <li>🏛️ Pres. Mun. Alejandro Verdugo Angulo (P. Peñasco)</li>
+                                <li>🏛️ Autoridades Federales (SEMARNAT, CONAGUA, ZOFEMAT)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. UBICACION Y CONTEXTO -->
+            <section data-background-image="assets/mapa_binacional.png">
+                <div class="glass-panel dark">
+                    <span class="badge" style="background:var(--secondary-color);"><i class="fa-solid fa-earth-americas"></i> El Contexto</span>
+                    <h2 class="title-main">Solución al Estrés Hídrico</h2>
+                    <div class="grid-2">
+                        <div class="flex-col">
+                            <p class="text-lg">Una planta de <strong>200 millones m³/año</strong> ubicada
+                                estratégicamente en el Golfo de California, estructurada bajo un esquema de intercambio.
+                            </p>
+                            <ul class="feature-list text-md">
+                                <li><strong>Sonora:</strong> Abastecimiento directo para Hermosillo y P. Peñasco.
+                                    Inversión y empleos masivos.</li>
+                                <li><strong>Arizona:</strong> Cubre el déficit del Río Colorado (~500k acres-pie).
+                                    Recibe agua río arriba a cambio.</li>
+                            </ul>
+                            <div class="card dark" style="margin-top: 1rem;">
+                                <h4>Ventaja Acon Consulting</h4>
+                                <p>Relaciones locales sólidas para agilizar permisos ambientales/estatales y control de
+                                    tierras idóneas.</p>
+                            </div>
+                            <button class="interactive-btn" onclick="togglePanel('panel-impacto')"><i class="fa-solid fa-chart-pie"></i> Ver Impacto Integral</button>
+                            
+                            <!-- Hidden Data Panel -->
+                            <div id="panel-impacto" class="data-panel">
+                                <button class="close-panel-btn" onclick="togglePanel('panel-impacto')"><i class="fa-solid fa-xmark"></i></button>
+                                <h3><i class="fa-solid fa-users" style="color:var(--secondary-color);"></i> Impacto Demográfico y Económico</h3>
+                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;">Garantía de suministro crítico para el desarrollo de la franja fronteriza.</p>
+                                <div class="data-grid">
+                                    <div class="data-stat">
+                                        <h5>Población Beneficiada</h5>
+                                        <div class="value">2.5M+</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>Empresas Nearshoring Aseguradas</h5>
+                                        <div class="value">200+</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>Volumen (M3/Año)</h5>
+                                        <div class="value">200M</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>Disputas TRATADO '44 Resueltas</h5>
+                                        <div class="value">100%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blank column to let the background map shine -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. DETALLE TÉCNICO (ÓSMOSIS) -->
+            <section data-background-image="assets/proceso_osmosis.png">
+                <div class="glass-panel dark" style="background: rgba(15,23,42,0.9);">
+                    <span class="badge" style="background: #3b82f6;"><i class="fa-solid fa-microchip"></i> Ingeniería de Punta</span>
+                    <h2 class="title-main">Tecnología Sostenible (RO)</h2>
+                    <div class="grid-2">
+                        <div>
+                            <ul class="feature-list tech-list text-md">
+                                <li><strong>Captación Submarina (1-3 km of shore):</strong> Pozos o sistemas de baja
+                                    velocidad para minimizar captura de fauna.</li>
+                                <li><strong>Ósmosis Inversa (60-70 bar):</strong> Membranas de última generación con
+                                    Recuperación de Energía (ERD). PCH: 3.5 kWh/m³.</li>
+                                <li><strong>Descarga de Salmuera (3-5 km offshore):</strong> Difusores Multiport de alta
+                                    velocidad para dilución inmediata de 70,000 ppm.</li>
+                            </ul>
+                            <button class="interactive-btn" onclick="togglePanel('panel-tecnico')"><i class="fa-solid fa-microscope"></i> Ficha Técnica de Desempeño</button>
+                            
+                            <!-- Hidden Data Panel -->
+                            <div id="panel-tecnico" class="data-panel">
+                                <button class="close-panel-btn" onclick="togglePanel('panel-tecnico')"><i class="fa-solid fa-xmark"></i></button>
+                                <h3><i class="fa-solid fa-gears" style="color:var(--secondary-color);"></i> Eficiencia Sistémica</h3>
+                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;">Especificaciones operativas diseñadas para maximizar rendimiento y minimizar OPEX energético.</p>
+                                <div class="data-grid">
+                                    <div class="data-stat">
+                                        <h5>Rechazo de Sales (SWRO 4G)</h5>
+                                        <div class="value">99.8%</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>Recuperación de Energía (ERD)</h5>
+                                        <div class="value">96.0%</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>Disponibilidad Planta</h5>
+                                        <div class="value">98.5%</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>Uso Químico Reducido</h5>
+                                        <div class="value">-30%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Process image shines through background -->
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. REQUERIMIENTOS FEDERALES (SEMARNAT / CONAGUA) -->
+            <section data-background-image="assets/modern_desalination_plant.png">
+                <div class="glass-panel">
+                    <span class="badge"><i class="fa-solid fa-scale-balanced"></i> Gestión</span>
+                    <h2 class="title-main">Requerimientos Federales</h2>
+                    <p class="subtitle">Ruta Crítica hacia la Certidumbre</p>
+
+                    <div class="grid-2">
+                        <div class="card">
+                            <h4><i class="fa-solid fa-leaf" style="color:#22c55e;"></i> SEMARNAT (MIA Regional)</h4>
+                            <p class="text-sm">Requerimos consulta previa para establecer términos de referencia
+                                estrictos. Estudios batimétricos, de corrientes marinas y modelado de dispersión de
+                                salmuera para blindar ecológicamente el proyecto.</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fa-solid fa-water" style="color:#0ea5e9;"></i> CONAGUA</h4>
+                            <p class="text-sm">Concesiones de Extracción y Permisos de Descarga. Integración binacional
+                                vía CILA para validar el esquema hídrico compensatorio con la cuenca del Río Colorado.
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fa-solid fa-map" style="color:#eab308;"></i> ZOFEMAT</h4>
+                            <p class="text-sm">Levantamiento de polígonos para concesión de toma y descarga submarina
+                                (30-50 años).</p>
+                        </div>
+                        <div class="card">
+                            <h4><i class="fa-solid fa-handshake-angle" style="color:#64748b;"></i> SEGOB / SRE</h4>
+                            <p class="text-sm">Garantizar que el Tratado beneficie primero la soberanía hídrica de
+                                México y respete normativas internacionales.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. REQUERIMIENTOS LOCALES (ESTADO / MUNICIPIO) -->
+            <section data-background-image="assets/sonora_gov.png">
+                <div class="glass-panel dark">
+                    <h2 class="title-main"><i class="fa-solid fa-building-columns" style="color:var(--accent-color);"></i> Requerimientos Locales</h2>
+                    <div class="grid-2">
+                        <div class="flex-col">
+                            <h3 style="color:#38bdf8 !important;"><i class="fa-solid fa-map-location-dot"></i> Gobierno de Sonora</h3>
+                            <p class="text-md">Respaldamos la visión del Gobernador Durazo: los proyectos deben dejar
+                                derrama real en Sonora. Solicitamos:</p>
+                            <ul class="feature-list text-md">
+                                <li>Declaración de interés estatal condicionado a rigurosidad de MIA.</li>
+                                <li>Mesa inter-secretarial (Economía, SIDUR).</li>
+                                <li>Registro comercial como inversión estratégica extranjera (~$5B USD).</li>
+                            </ul>
+                        </div>
+                        <div class="flex-col">
+                            <h3 style="color:#eab308 !important;"><i class="fa-solid fa-city"></i> Puerto Peñasco</h3>
+                            <p class="text-md">Liderazgo transparente del Alc. Alejandro Verdugo:</p>
+                            <ul class="feature-list text-md">
+                                <li>Licencias de construcción y uso de suelo industrial.</li>
+                                <li>Gestión con cooperativas pesqueras y sector hotelero.</li>
+                                <li>Programas directos de empleo (miles de plazas) y capacitación técnica.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. COMPROMISO AMBIENTAL Y SOCIAL -->
+            <section data-background-image="assets/solar_water.png">
+                <div class="glass-panel">
+                    <span class="badge" style="background:#22c55e;"><i class="fa-solid fa-seedling"></i> Sustentabilidad Total</span>
+                    <h2 class="title-main">Haciendo Frente a los Retos</h2>
+                    <div class="grid-3 text-sm">
+                        <div class="card border-green">
+                            <h4 style="color:#16a34a !important;"><i class="fa-solid fa-dove"></i> Zona Ramsar (Bahía Adair)</h4>
+                            <p>Respeto absoluto de humedales. Si el polígono entra en zona de riesgo, reubicaremos la
+                                planta al sur de la ciudad.</p>
+                        </div>
+                        <div class="card border-green">
+                            <h4 style="color:#0ea5e9 !important;"><i class="fa-solid fa-fish"></i> Actividad Pesquera</h4>
+                            <p>Toma/Descarga lejos del camarón/jaiba. Monitoreo en biología bentónica y compensaciones /
+                                arrecifes artificiales.</p>
+                        </div>
+                        <div class="card border-green">
+                            <h4 style="color:#eab308 !important;"><i class="fa-solid fa-solar-panel"></i> Eficiencia y Cero Carbono</h4>
+                            <p>Capacidad operativa conectada a macro-granjas solares en Sonora para bajar la huella de
+                                carbono térmica.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. EL VALOR FINANCIERO Y ECONOMICO -->
+            <section data-background-image="assets/finance_bg.png">
+                <div class="glass-panel text-dark" style="background: white;">
+                    <h2 class="title-main"><i class="fa-solid fa-chart-line" style="color:#0ea5e9;"></i> Potencial Financiero (CAPEX & OPEX)</h2>
+                    <p class="subtitle">~$5.0 Mil Millones USD de Inversión Inicial | LCOW Competitivo</p>
+
+                    <div class="grid-2" style="align-items: start;">
+                        <div class="chart-container" style="height: 400px; box-shadow: none;">
+                            <canvas id="capexChart"></canvas>
+                        </div>
+                        <div>
+                            <ul class="feature-list text-md" style="margin-top: 1rem;">
+                                <li><strong>Construcción:</strong> ~3,000 Empleos Pico Generados (Derrama ~$1.3B)</li>
+                                <li><strong>Operación:</strong> ~340 Mantenimiento/Admvo. Permanente</li>
+                                <li><strong>Fiscal (30 años):</strong> Derrama en Impuestos Fed/Est/Mun excede los
+                                    <strong>$1.5 B USD</strong>.</li>
+                                <li><strong>Ratio Beneficio Costo Sonora:</strong> 30:1 en métricas base.</li>
+                            </ul>
+                            <div class="card"
+                                style="margin-top:1rem; border-left: 4px solid var(--accent-color); border-top:none;">
+                                <p><strong>Deuda / Equity Mixto:</strong> WIFIA, Banca Comercial, Equity Privado y
+                                    NADB/CAF respaldarán la viabilidad.</p>
+                            </div>
+                            <button class="interactive-btn" onclick="togglePanel('panel-financiero')" style="color: #1e293b; border-color: #1e293b;"><i class="fa-solid fa-file-invoice-dollar"></i> Desglose de Retorno (ROI)</button>
+                            
+                            <!-- Hidden Data Panel -->
+                            <div id="panel-financiero" class="data-panel">
+                                <button class="close-panel-btn" onclick="togglePanel('panel-financiero')"><i class="fa-solid fa-xmark"></i></button>
+                                <h3><i class="fa-solid fa-money-bill-trend-up" style="color:var(--secondary-color);"></i> Métricas de Rentabilidad</h3>
+                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;">Estructura financiera blindada para grado de inversión con retornos garantizados por tarifas a largo plazo (PPA/WPA).</p>
+                                <div class="data-grid">
+                                    <div class="data-stat">
+                                        <h5>TIR Estimada (Equity)</h5>
+                                        <div class="value">12-14%</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>Periodo Recuperación </h5>
+                                        <div class="value">8.5 Años</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>LCOW (Costo Nivelado)</h5>
+                                        <div class="value">< $0.85</div>
+                                    </div>
+                                    <div class="data-stat">
+                                        <h5>Vida Útil del Proyecto</h5>
+                                        <div class="value">35 Años</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CRONOGRAMA MAESTRO -->
+            <section data-background-image="assets/blueprint_bg.png">
+                <div class="glass-panel dark" style="background: rgba(15, 23, 42, 0.95);">
+                    <h2 class="title-main"><i class="fa-solid fa-timeline" style="color:#38bdf8;"></i> Cronograma Hacia 2035</h2>
+                    
+                    <div class="timeline-container" style="margin-top: 2.5rem;">
+                        <div class="timeline-step">
+                            <div class="timeline-year" style="color: #38bdf8;">2026 - 2027</div>
+                            <div class="timeline-content card dark" style="border-top-color: #38bdf8;">
+                                <h4>Fase 1: Coordinación y Permisos</h4>
+                                <ul class="feature-list text-sm" style="margin-top: 1rem;">
+                                    <li><strong>Coordinación (6M):</strong> Presentaciones y mesas de trabajo.</li>
+                                    <li><strong>Permisos (18M):</strong> Estudios Sitio & MIA Regional.</li>
+                                    <li><strong>Aprobación:</strong> Resolución favorable SEMARNAT y CONAGUA.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="timeline-year" style="color: #eab308;">2029 - 2030</div>
+                            <div class="timeline-content card dark" style="border-top-color: #eab308;">
+                                <h4>Fase 2: Ingeniería y Cierre Financiero</h4>
+                                <ul class="feature-list text-sm" style="margin-top: 1rem;">
+                                    <li><strong>Ingeniería (24M):</strong> Ingeniería de Detalle y estructuración EPC.</li>
+                                    <li><strong>Fondos (12M):</strong> Cierre Financiero (Deuda y Equity).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="timeline-year" style="color: #22c55e;">2031 - 2035</div>
+                            <div class="timeline-content card dark" style="border-top-color: #22c55e;">
+                                <h4>Fase 3: Construcción y Operación</h4>
+                                <ul class="feature-list text-sm" style="margin-top: 1rem;">
+                                    <li><strong>Obra Civil (24M):</strong> Obra Marina e Infraestructura base.</li>
+                                    <li><strong>Planta RO (24M):</strong> Montaje electromecánico y trenes de ósmosis.</li>
+                                    <li><strong>Operación (12M):</strong> Puesta en Marcha y entrega de proyecto.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 9. CIERRE Y CALL TO ACTION -->
+            <section data-background-image="assets/modern_desalination_plant.png">
+                <div class="glass-panel" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <div style="font-size: 4rem; color: #0284c7; margin-bottom: 1rem;"><i class="fa-solid fa-handshake"></i></div>
+                    <h2 class="title-main" style="text-align: center;">Mesa de Trabajo Inicial</h2>
+                    <p class="text-lg" style="margin: 2rem 0; color: #334155; font-style: italic;">
+                        "Sonora y México deciden. Nosotros facilitamos, cumplimos y entregamos la seguridad hídrica
+                        regional del futuro."
+                    </p>
+
+                    <div
+                        style="background: rgba(13, 40, 71, 0.05); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; text-align: left; border-left: 4px solid var(--secondary-color);">
+                        <h4 style="margin-top:0;"><i class="fa-solid fa-calendar-check"></i> Próximos Pasos (Mes 1):</h4>
+                        <ol style="font-size: 1.1rem; padding-left: 1.5rem;">
+                            <li>Reunión técnica presencial con el Ejecutivo de Sonora.</li>
+                            <li>Instalación de mesa de enlace operativo con SIDUR/SEMARNAT.</li>
+                        </ol>
+                    </div>
+
+                    <a href="#" class="cta-btn"><i class="fa-solid fa-envelope-open-text"></i> Agendar Junta de Arranque</a>
+
+                    <p class="text-sm" style="margin-top: 3rem; color: #94a3b8;"><i class="fa-solid fa-lock"></i> Acon Consulting © 2026 - Documento
+                        Confidencial</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'concave', // Slightly more dynamic
+            backgroundTransition: 'zoom'
+        });
+
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+
+        // CAPEX Pie Chart
+        const ctx = document.getElementById('capexChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Equipos/Planta (58%)', 'Tomas Submarinas (16%)', 'Infra. Auxiliar (9%)', 'Ingeniería & Permisos (6%)', 'Contingencias (11%)'],
+                datasets: [{
+                    data: [2885, 832, 455, 305, 545],
+                    backgroundColor: [
+                        '#0284c7', // Blue
+                        '#0ea5e9', // Light Blue
+                        '#eab308', // Yellow
+                        '#10b981', // Green
+                        '#0f172a'  // Dark
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right' }
+                },
+                cutout: '65%'
+            }
+        });
+
+        Reveal.on('slidechanged', event => {
+            const bg = event.currentSlide.getAttribute('data-background-image');
+            if (bg) {
+                document.querySelector('.reveal .backgrounds').style.filter = 'brightness(0.4)';
+            } else {
+                document.querySelector('.reveal .backgrounds').style.filter = 'brightness(1)';
+            }
+            // Close panels on slide change
+            document.querySelectorAll('.data-panel.active').forEach(panel => {
+                panel.classList.remove('active');
+            });
+        });
+        setTimeout(() => {
+            const currentBg = Reveal.getCurrentSlide().getAttribute('data-background-image');
+            if (currentBg) document.querySelector('.reveal .backgrounds').style.filter = 'brightness(0.4)';
+        }, 100);
+
+        // Interactive Panel Logic
+        function togglePanel(panelId) {
+            const panel = document.getElementById(panelId);
+            if (panel.classList.contains('active')) {
+                panel.classList.remove('active');
+            } else {
+                // Close others first
+                document.querySelectorAll('.data-panel.active').forEach(p => p.classList.remove('active'));
+                panel.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
