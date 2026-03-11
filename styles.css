@@ -19,7 +19,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0d2847, #1e3a8a, #00a8cc);
+    background: #0f172a; /* Dark solid instead of gradient to fix edge bleed */
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;

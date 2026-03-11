@@ -368,8 +368,8 @@
             progress: true,
             center: true,
             hash: true,
-            transition: 'concave', // Slightly more dynamic
-            backgroundTransition: 'zoom'
+            transition: 'fade', // Changed from concave to prevent edge light bleed
+            backgroundTransition: 'fade'
         });
 
         mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
