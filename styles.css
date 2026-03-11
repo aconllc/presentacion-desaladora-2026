@@ -53,8 +53,11 @@ h6 {
     text-align: left;
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
     box-sizing: border-box;
+    word-break: break-word;
 }
 
 .glass-panel.dark {
@@ -440,4 +443,38 @@ i.fa-solid {
 
 .reveal .slides>section {
     padding: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 800px) {
+    .glass-panel {
+        padding: 1.5rem !important;
+        width: 100% !important;
+        border-radius: 12px;
+    }
+    .title-main {
+        font-size: 2.2rem !important;
+    }
+    .subtitle {
+        font-size: 1.2rem !important;
+    }
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem;
+    }
+    .text-lg { font-size: 1.1rem; }
+    .text-md { font-size: 1rem; }
+    .timeline-step {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .timeline-year {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .timeline-step::before {
+        left: -1.5rem;
+        transform: translateX(0);
+    }
 }
