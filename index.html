@@ -15,29 +15,33 @@
 </head>
 
 <body>
+    <div class="language-switcher">
+        <div class="flag-btn active" onclick="switchLanguage('es')" title="Español">🇲🇽</div>
+        <div class="flag-btn" onclick="switchLanguage('en')" title="English">🇺🇸</div>
+    </div>
     <div class="reveal">
         <div class="slides">
 
             <!-- 1. PORTADA -->
             <section data-background-image="./assets/desert_ocean.png" data-background-transition="zoom">
                 <div class="glass-panel dark" style="background: rgba(15, 23, 42, 0.9);">
-                    <span class="badge"><i class="fa-solid fa-file-signature"></i> Memorándum Ejecutivo</span>
-                    <h1 class="title-main">Colaboración Binacional Estratégica</h1>
-                    <p class="subtitle" style="color: #38bdf8;">Proyecto Planta Desaladora Puerto Peñasco
+                    <span class="badge"><i class="fa-solid fa-file-signature"></i> <span data-i18n="badge-exec">Memorándum Ejecutivo</span></span>
+                    <h1 class="title-main" data-i18n="title-main">Colaboración Binacional Estratégica</h1>
+                    <p class="subtitle" style="color: #38bdf8;" data-i18n="p-subtitle">Proyecto Planta Desaladora Puerto Peñasco
                     </p>
 
                     <div class="grid-2"
                         style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
                         <div>
-                            <p class="text-md" style="color: #e2e8f0;"><strong>De:</strong> Acon Consulting | Carlos Contreras</p>
-                            <p class="text-md" style="color: #e2e8f0;"><strong>Fecha:</strong> 10 de marzo de 2026</p>
+                            <p class="text-md" style="color: #e2e8f0;"><strong data-i18n="label-from">De:</strong> Acon Consulting | Carlos Contreras</p>
+                            <p class="text-md" style="color: #e2e8f0;"><strong data-i18n="label-date">Fecha:</strong> 10 de marzo de 2026</p>
                         </div>
                         <div>
-                            <p class="text-md" style="color: #e2e8f0;"><strong>Para:</strong></p>
+                            <p class="text-md" style="color: #e2e8f0;"><strong data-i18n="label-to">Para:</strong></p>
                             <ul style="font-size: 1rem; list-style: none; padding: 0; color: #cbd5e1;">
-                                <li>🏛️ Gob. Alfonso Durazo Montaño (Estado de Sonora)</li>
-                                <li>🏛️ Pres. Mun. Alejandro Verdugo Angulo (P. Peñasco)</li>
-                                <li>🏛️ Autoridades Federales (SEMARNAT, CONAGUA, ZOFEMAT)</li>
+                                <li data-i18n="to-1">🏛️ Gob. Alfonso Durazo Montaño (Estado de Sonora)</li>
+                                <li data-i18n="to-2">🏛️ Pres. Mun. Alejandro Verdugo Angulo (P. Peñasco)</li>
+                                <li data-i18n="to-3">🏛️ Autoridades Federales (SEMARNAT, CONAGUA, ZOFEMAT)</li>
                             </ul>
                         </div>
                     </div>
@@ -47,46 +51,44 @@
             <!-- 2. UBICACION Y CONTEXTO -->
             <section data-background-image="./assets/mapa_binacional.png">
                 <div class="glass-panel dark">
-                    <span class="badge" style="background:var(--secondary-color);"><i class="fa-solid fa-earth-americas"></i> El Contexto</span>
-                    <h2 class="title-main">Solución al Estrés Hídrico</h2>
+                    <span class="badge" style="background:var(--secondary-color);"><i class="fa-solid fa-earth-americas"></i> <span data-i18n="badge-context">El Contexto</span></span>
+                    <h2 class="title-main" data-i18n="context-title">Solución al Estrés Hídrico</h2>
                     <div class="grid-2">
                         <div class="flex-col">
-                            <p class="text-lg">Una planta de <strong>200 millones m³/año</strong> ubicada
+                            <p class="text-lg" data-i18n="context-p1">Una planta de <strong>200 millones m³/año</strong> ubicada
                                 estratégicamente en el Golfo de California, estructurada bajo un esquema de intercambio.
                             </p>
                             <ul class="feature-list text-md">
-                                <li><strong>Sonora:</strong> Abastecimiento directo para Hermosillo y P. Peñasco.
-                                    Inversión y empleos masivos.</li>
-                                <li><strong>Arizona:</strong> Cubre el déficit del Río Colorado (~500k acres-pie).
-                                    Recibe agua río arriba a cambio.</li>
+                                <li data-i18n="context-li1"><strong>Sonora:</strong> Abastecimiento directo para Hermosillo y P. Peñasco. Inversión y empleos masivos.</li>
+                                <li data-i18n="context-li2"><strong>Arizona:</strong> Cubre el déficit del Río Colorado (~500k acres-pie). Recibe agua río arriba a cambio.</li>
                             </ul>
                             <div class="card dark" style="margin-top: 1rem;">
-                                <h4>Ventaja Acon Consulting</h4>
-                                <p>Relaciones locales sólidas para agilizar permisos ambientales/estatales y control de
+                                <h4 data-i18n="context-card-title">Ventaja Acon Consulting</h4>
+                                <p data-i18n="context-card-p">Relaciones locales sólidas para agilizar permisos ambientales/estatales y control de
                                     tierras idóneas.</p>
                             </div>
-                            <button class="interactive-btn" onclick="togglePanel('panel-impacto')"><i class="fa-solid fa-chart-pie"></i> Ver Impacto Integral</button>
+                            <button class="interactive-btn" onclick="togglePanel('panel-impacto')"><i class="fa-solid fa-chart-pie"></i> <span data-i18n="btn-impact">Ver Impacto Integral</span></button>
                             
                             <!-- Hidden Data Panel -->
                             <div id="panel-impacto" class="data-panel">
                                 <button class="close-panel-btn" onclick="togglePanel('panel-impacto')"><i class="fa-solid fa-xmark"></i></button>
-                                <h3><i class="fa-solid fa-users" style="color:var(--secondary-color);"></i> Impacto Demográfico y Económico</h3>
-                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;">Garantía de suministro crítico para el desarrollo de la franja fronteriza.</p>
+                                <h3><i class="fa-solid fa-users" style="color:var(--secondary-color);"></i> <span data-i18n="panel-impact-title">Impacto Demográfico y Económico</span></h3>
+                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;" data-i18n="panel-impact-p">Garantía de suministro crítico para el desarrollo de la franja fronteriza.</p>
                                 <div class="data-grid">
                                     <div class="data-stat">
-                                        <h5>Población Beneficiada</h5>
+                                        <h5 data-i18n="stat-pop-label">Población Beneficiada</h5>
                                         <div class="value">2.5M+</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>Empresas Nearshoring Aseguradas</h5>
+                                        <h5 data-i18n="stat-near-label">Empresas Nearshoring Aseguradas</h5>
                                         <div class="value">200+</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>Volumen (M3/Año)</h5>
+                                        <h5 data-i18n="stat-vol-label">Volumen (M3/Año)</h5>
                                         <div class="value">200M</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>Disputas TRATADO '44 Resueltas</h5>
+                                        <h5 data-i18n="stat-treaty-label">Disputas TRATADO '44 Resueltas</h5>
                                         <div class="value">100%</div>
                                     </div>
                                 </div>
@@ -100,40 +102,37 @@
             <!-- 3. DETALLE TÉCNICO (ÓSMOSIS) -->
             <section data-background-image="./assets/proceso_osmosis.png">
                 <div class="glass-panel dark" style="background: rgba(15,23,42,0.9);">
-                    <span class="badge" style="background: #3b82f6;"><i class="fa-solid fa-microchip"></i> Ingeniería de Punta</span>
-                    <h2 class="title-main">Tecnología Sostenible (RO)</h2>
+                    <span class="badge" style="background: #3b82f6;"><i class="fa-solid fa-microchip"></i> <span data-i18n="badge-tech">Ingeniería de Punta</span></span>
+                    <h2 class="title-main" data-i18n="tech-title">Tecnología Sostenible (RO)</h2>
                     <div class="grid-2">
                         <div>
                             <ul class="feature-list tech-list text-md">
-                                <li><strong>Captación Submarina (1-3 km of shore):</strong> Pozos o sistemas de baja
-                                    velocidad para minimizar captura de fauna.</li>
-                                <li><strong>Ósmosis Inversa (60-70 bar):</strong> Membranas de última generación con
-                                    Recuperación de Energía (ERD). PCH: 3.5 kWh/m³.</li>
-                                <li><strong>Descarga de Salmuera (3-5 km offshore):</strong> Difusores Multiport de alta
-                                    velocidad para dilución inmediata de 70,000 ppm.</li>
+                                <li data-i18n="tech-li1"><strong>Captación Submarina (1-3 km off shore):</strong> Pozos o sistemas de baja velocidad para minimizar captura de fauna.</li>
+                                <li data-i18n="tech-li2"><strong>Ósmosis Inversa (60-70 bar):</strong> Membranas de última generación con Recuperación de Energía (ERD). PCH: 3.5 kWh/m³.</li>
+                                <li data-i18n="tech-li3"><strong>Descarga de Salmuera (3-5 km offshore):</strong> Difusores Multiport de alta velocidad para dilución inmediata de 70,000 ppm.</li>
                             </ul>
-                            <button class="interactive-btn" onclick="togglePanel('panel-tecnico')"><i class="fa-solid fa-microscope"></i> Ficha Técnica de Desempeño</button>
+                            <button class="interactive-btn" onclick="togglePanel('panel-tecnico')"><i class="fa-solid fa-microscope"></i> <span data-i18n="btn-tech-spec">Ficha Técnica de Desempeño</span></button>
                             
                             <!-- Hidden Data Panel -->
                             <div id="panel-tecnico" class="data-panel">
                                 <button class="close-panel-btn" onclick="togglePanel('panel-tecnico')"><i class="fa-solid fa-xmark"></i></button>
-                                <h3><i class="fa-solid fa-gears" style="color:var(--secondary-color);"></i> Eficiencia Sistémica</h3>
-                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;">Especificaciones operativas diseñadas para maximizar rendimiento y minimizar OPEX energético.</p>
+                                <h3><i class="fa-solid fa-gears" style="color:var(--secondary-color);"></i> <span data-i18n="panel-tech-title">Eficiencia Sistémica</span></h3>
+                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;" data-i18n="panel-tech-p">Especificaciones operativas diseñadas para maximizar rendimiento y minimizar OPEX energético.</p>
                                 <div class="data-grid">
                                     <div class="data-stat">
-                                        <h5>Rechazo de Sales (SWRO 4G)</h5>
+                                        <h5 data-i18n="stat-salt-label">Rechazo de Sales (SWRO 4G)</h5>
                                         <div class="value">99.8%</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>Recuperación de Energía (ERD)</h5>
+                                        <h5 data-i18n="stat-recovery-label">Recuperación de Energía (ERD)</h5>
                                         <div class="value">96.0%</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>Disponibilidad Planta</h5>
+                                        <h5 data-i18n="stat-avail-label">Disponibilidad Planta</h5>
                                         <div class="value">98.5%</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>Uso Químico Reducido</h5>
+                                        <h5 data-i18n="stat-chem-label">Uso Químico Reducido</h5>
                                         <div class="value">-30%</div>
                                     </div>
                                 </div>
@@ -148,32 +147,26 @@
             <!-- 4. REQUERIMIENTOS FEDERALES (SEMARNAT / CONAGUA) -->
             <section data-background-image="./assets/modern_desalination_plant.png">
                 <div class="glass-panel">
-                    <span class="badge"><i class="fa-solid fa-scale-balanced"></i> Gestión</span>
-                    <h2 class="title-main">Requerimientos Federales</h2>
-                    <p class="subtitle">Ruta Crítica hacia la Certidumbre</p>
+                    <span class="badge"><i class="fa-solid fa-scale-balanced"></i> <span data-i18n="badge-mgmt">Gestión</span></span>
+                    <h2 class="title-main" data-i18n="fed-title">Requerimientos Federales</h2>
+                    <p class="subtitle" data-i18n="fed-subtitle">Ruta Crítica hacia la Certidumbre</p>
 
                     <div class="grid-2">
                         <div class="card">
-                            <h4><i class="fa-solid fa-leaf" style="color:#22c55e;"></i> SEMARNAT (MIA Regional)</h4>
-                            <p class="text-sm">Requerimos consulta previa para establecer términos de referencia
-                                estrictos. Estudios batimétricos, de corrientes marinas y modelado de dispersión de
-                                salmuera para blindar ecológicamente el proyecto.</p>
+                            <h4><i class="fa-solid fa-leaf" style="color:#22c55e;"></i> <span data-i18n="fed-card1-h">SEMARNAT (MIA Regional)</span></h4>
+                            <p class="text-sm" data-i18n="fed-card1-p">Requerimos consulta previa para establecer términos de referencia estrictos. Estudios batimétricos, de corrientes marinas y modelado de dispersión de salmuera para blindar ecológicamente el proyecto.</p>
                         </div>
                         <div class="card">
-                            <h4><i class="fa-solid fa-water" style="color:#0ea5e9;"></i> CONAGUA</h4>
-                            <p class="text-sm">Concesiones de Extracción y Permisos de Descarga. Integración binacional
-                                vía CILA para validar el esquema hídrico compensatorio con la cuenca del Río Colorado.
-                            </p>
+                            <h4><i class="fa-solid fa-water" style="color:#0ea5e9;"></i> <span data-i18n="fed-card2-h">CONAGUA</span></h4>
+                            <p class="text-sm" data-i18n="fed-card2-p">Concesiones de Extracción y Permisos de Descarga. Integración binacional vía CILA para validar el esquema hídrico compensatorio con la cuenca del Río Colorado.</p>
                         </div>
                         <div class="card">
-                            <h4><i class="fa-solid fa-map" style="color:#eab308;"></i> ZOFEMAT</h4>
-                            <p class="text-sm">Levantamiento de polígonos para concesión de toma y descarga submarina
-                                (30-50 años).</p>
+                            <h4><i class="fa-solid fa-map" style="color:#eab308;"></i> <span data-i18n="fed-card3-h">ZOFEMAT</span></h4>
+                            <p class="text-sm" data-i18n="fed-card3-p">Levantamiento de polígonos para concesión de toma y descarga submarina (30-50 años).</p>
                         </div>
                         <div class="card">
-                            <h4><i class="fa-solid fa-handshake-angle" style="color:#64748b;"></i> SEGOB / SRE</h4>
-                            <p class="text-sm">Garantizar que el Tratado beneficie primero la soberanía hídrica de
-                                México y respete normativas internacionales.</p>
+                            <h4><i class="fa-solid fa-handshake-angle" style="color:#64748b;"></i> <span data-i18n="fed-card4-h">SEGOB / SRE</span></h4>
+                            <p class="text-sm" data-i18n="fed-card4-p">Garantizar que el Tratado beneficie primero la soberanía hídrica de México y respete normativas internacionales.</p>
                         </div>
                     </div>
                 </div>
@@ -182,25 +175,24 @@
             <!-- 5. REQUERIMIENTOS LOCALES (ESTADO / MUNICIPIO) -->
             <section data-background-image="./assets/sonora_gov.png">
                 <div class="glass-panel dark">
-                    <h2 class="title-main"><i class="fa-solid fa-building-columns" style="color:var(--accent-color);"></i> Requerimientos Locales</h2>
+                    <h2 class="title-main"><i class="fa-solid fa-building-columns" style="color:var(--accent-color);"></i> <span data-i18n="local-title">Requerimientos Locales</span></h2>
                     <div class="grid-2">
                         <div class="flex-col">
-                            <h3 style="color:#38bdf8 !important;"><i class="fa-solid fa-map-location-dot"></i> Gobierno de Sonora</h3>
-                            <p class="text-md">Respaldamos la visión del Gobernador Durazo: los proyectos deben dejar
-                                derrama real en Sonora. Solicitamos:</p>
+                            <h3 style="color:#38bdf8 !important;"><i class="fa-solid fa-map-location-dot"></i> <span data-i18n="local-sonora-h">Gobierno de Sonora</span></h3>
+                            <p class="text-md" data-i18n="local-sonora-p">Respaldamos la visión del Gobernador Durazo: los proyectos deben dejar derrama real en Sonora. Solicitamos:</p>
                             <ul class="feature-list text-md">
-                                <li>Declaración de interés estatal condicionado a rigurosidad de MIA.</li>
-                                <li>Mesa inter-secretarial (Economía, SIDUR).</li>
-                                <li>Registro comercial como inversión estratégica extranjera (~$5B USD).</li>
+                                <li data-i18n="local-sonora-li1">Declaración de interés estatal condicionado a rigurosidad de MIA.</li>
+                                <li data-i18n="local-sonora-li2">Mesa inter-secretarial (Economía, SIDUR).</li>
+                                <li data-i18n="local-sonora-li3">Registro comercial como inversión estratégica extranjera (~$5B USD).</li>
                             </ul>
                         </div>
                         <div class="flex-col">
-                            <h3 style="color:#eab308 !important;"><i class="fa-solid fa-city"></i> Puerto Peñasco</h3>
-                            <p class="text-md">Liderazgo transparente del Alc. Alejandro Verdugo:</p>
+                            <h3 style="color:#eab308 !important;"><i class="fa-solid fa-city"></i> <span data-i18n="local-penasco-h">Puerto Peñasco</span></h3>
+                            <p class="text-md" data-i18n="local-penasco-p">Liderazgo transparente del Alc. Alejandro Verdugo:</p>
                             <ul class="feature-list text-md">
-                                <li>Licencias de construcción y uso de suelo industrial.</li>
-                                <li>Gestión con cooperativas pesqueras y sector hotelero.</li>
-                                <li>Programas directos de empleo (miles de plazas) y capacitación técnica.</li>
+                                <li data-i18n="local-penasco-li1">Licencias de construcción y uso de suelo industrial.</li>
+                                <li data-i18n="local-penasco-li2">Gestión con cooperativas pesqueras y sector hotelero.</li>
+                                <li data-i18n="local-penasco-li3">Programas directos de empleo (miles de plazas) y capacitación técnica.</li>
                             </ul>
                         </div>
                     </div>
@@ -210,23 +202,20 @@
             <!-- 6. COMPROMISO AMBIENTAL Y SOCIAL -->
             <section data-background-image="./assets/solar_water.png">
                 <div class="glass-panel">
-                    <span class="badge" style="background:#22c55e;"><i class="fa-solid fa-seedling"></i> Sustentabilidad Total</span>
-                    <h2 class="title-main">Haciendo Frente a los Retos</h2>
+                    <span class="badge" style="background:#22c55e;"><i class="fa-solid fa-seedling"></i> <span data-i18n="badge-sust">Sustentabilidad Total</span></span>
+                    <h2 class="title-main" data-i18n="env-title">Haciendo Frente a los Retos</h2>
                     <div class="grid-3 text-sm">
                         <div class="card border-green">
-                            <h4 style="color:#16a34a !important;"><i class="fa-solid fa-dove"></i> Zona Ramsar (Bahía Adair)</h4>
-                            <p>Respeto absoluto de humedales. Si el polígono entra en zona de riesgo, reubicaremos la
-                                planta al sur de la ciudad.</p>
+                            <h4 style="color:#16a34a !important;"><i class="fa-solid fa-dove"></i> <span data-i18n="env-card1-h">Zona Ramsar (Bahía Adair)</span></h4>
+                            <p data-i18n="env-card1-p">Respeto absoluto de humedales. Si el polígono entra en zona de riesgo, reubicaremos la planta al sur de la ciudad.</p>
                         </div>
                         <div class="card border-green">
-                            <h4 style="color:#0ea5e9 !important;"><i class="fa-solid fa-fish"></i> Actividad Pesquera</h4>
-                            <p>Toma/Descarga lejos del camarón/jaiba. Monitoreo en biología bentónica y compensaciones /
-                                arrecifes artificiales.</p>
+                            <h4 style="color:#0ea5e9 !important;"><i class="fa-solid fa-fish"></i> <span data-i18n="env-card2-h">Actividad Pesquera</span></h4>
+                            <p data-i18n="env-card2-p">Toma/Descarga lejos del camarón/jaiba. Monitoreo en biología bentónica y compensaciones / arrecifes artificiales.</p>
                         </div>
                         <div class="card border-green">
-                            <h4 style="color:#eab308 !important;"><i class="fa-solid fa-solar-panel"></i> Eficiencia y Cero Carbono</h4>
-                            <p>Capacidad operativa conectada a macro-granjas solares en Sonora para bajar la huella de
-                                carbono térmica.</p>
+                            <h4 style="color:#eab308 !important;"><i class="fa-solid fa-solar-panel"></i> <span data-i18n="env-card3-h">Eficiencia y Cero Carbono</span></h4>
+                            <p data-i18n="env-card3-p">Capacidad operativa conectada a macro-granjas solares en Sonora para bajar la huella de carbono térmica.</p>
                         </div>
                     </div>
                 </div>
@@ -235,8 +224,8 @@
             <!-- 7. EL VALOR FINANCIERO Y ECONOMICO -->
             <section data-background-image="./assets/finance_bg.png">
                 <div class="glass-panel text-dark" style="background: white;">
-                    <h2 class="title-main"><i class="fa-solid fa-chart-line" style="color:#0ea5e9;"></i> Potencial Financiero (CAPEX & OPEX)</h2>
-                    <p class="subtitle">~$5.0 Mil Millones USD de Inversión Inicial | LCOW Competitivo</p>
+                    <h2 class="title-main"><i class="fa-solid fa-chart-line" style="color:#0ea5e9;"></i> <span data-i18n="fin-title">Potencial Financiero (CAPEX & OPEX)</span></h2>
+                    <p class="subtitle" data-i18n="fin-subtitle">~$5.0 Mil Millones USD de Inversión Inicial | LCOW Competitivo</p>
 
                     <div class="grid-2" style="align-items: start;">
                         <div class="chart-container" style="height: 400px; box-shadow: none;">
@@ -244,40 +233,38 @@
                         </div>
                         <div>
                             <ul class="feature-list text-md" style="margin-top: 1rem;">
-                                <li><strong>Construcción:</strong> ~3,000 Empleos Pico Generados (Derrama ~$1.3B)</li>
-                                <li><strong>Operación:</strong> ~340 Mantenimiento/Admvo. Permanente</li>
-                                <li><strong>Fiscal (30 años):</strong> Derrama en Impuestos Fed/Est/Mun excede los
-                                    <strong>$1.5 B USD</strong>.</li>
-                                <li><strong>Ratio Beneficio Costo Sonora:</strong> 30:1 en métricas base.</li>
+                                <li data-i18n="fin-li1"><strong>Construcción:</strong> ~3,000 Empleos Pico Generados (Derrama ~$1.3B)</li>
+                                <li data-i18n="fin-li2"><strong>Operación:</strong> ~340 Mantenimiento/Admvo. Permanente</li>
+                                <li data-i18n="fin-li3"><strong>Fiscal (30 años):</strong> Derrama en Impuestos Fed/Est/Mun excede los <strong>$1.5 B USD</strong>.</li>
+                                <li data-i18n="fin-li4"><strong>Ratio Beneficio Costo Sonora:</strong> 30:1 en métricas base.</li>
                             </ul>
                             <div class="card"
                                 style="margin-top:1rem; border-left: 4px solid var(--accent-color); border-top:none;">
-                                <p><strong>Deuda / Equity Mixto:</strong> WIFIA, Banca Comercial, Equity Privado y
-                                    NADB/CAF respaldarán la viabilidad.</p>
+                                <p data-i18n="fin-card-p"><strong>Deuda / Equity Mixto:</strong> WIFIA, Banca Comercial, Equity Privado y NADB/CAF respaldarán la viabilidad.</p>
                             </div>
-                            <button class="interactive-btn" onclick="togglePanel('panel-financiero')" style="color: #1e293b; border-color: #1e293b;"><i class="fa-solid fa-file-invoice-dollar"></i> Desglose de Retorno (ROI)</button>
+                            <button class="interactive-btn" onclick="togglePanel('panel-financiero')" style="color: #1e293b; border-color: #1e293b;"><i class="fa-solid fa-file-invoice-dollar"></i> <span data-i18n="btn-roi">Desglose de Retorno (ROI)</span></button>
                             
                             <!-- Hidden Data Panel -->
                             <div id="panel-financiero" class="data-panel">
                                 <button class="close-panel-btn" onclick="togglePanel('panel-financiero')"><i class="fa-solid fa-xmark"></i></button>
-                                <h3><i class="fa-solid fa-money-bill-trend-up" style="color:var(--secondary-color);"></i> Métricas de Rentabilidad</h3>
-                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;">Estructura financiera blindada para grado de inversión con retornos garantizados por tarifas a largo plazo (PPA/WPA).</p>
+                                <h3><i class="fa-solid fa-money-bill-trend-up" style="color:var(--secondary-color);"></i> <span data-i18n="panel-fin-title">Métricas de Rentabilidad</span></h3>
+                                <p style="color:#cbd5e1; margin-top:0.5rem; font-size:0.95rem;" data-i18n="panel-fin-p">Estructura financiera blindada para grado de inversión con retornos garantizados por tarifas a largo plazo (PPA/WPA).</p>
                                 <div class="data-grid">
                                     <div class="data-stat">
-                                        <h5>TIR Estimada (Equity)</h5>
+                                        <h5 data-i18n="stat-irr-label">TIR Estimada (Equity)</h5>
                                         <div class="value">12-14%</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>Periodo Recuperación </h5>
-                                        <div class="value">8.5 Años</div>
+                                        <h5 data-i18n="stat-payback-label">Periodo Recuperación</h5>
+                                        <div class="value" data-i18n="stat-payback-val">8.5 Años</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>LCOW (Costo Nivelado)</h5>
+                                        <h5 data-i18n="stat-lcow-label">LCOW (Costo Nivelado)</h5>
                                         <div class="value">< $0.85</div>
                                     </div>
                                     <div class="data-stat">
-                                        <h5>Vida Útil del Proyecto</h5>
-                                        <div class="value">35 Años</div>
+                                        <h5 data-i18n="stat-life-label">Vida Útil del Proyecto</h5>
+                                        <div class="value" data-i18n="stat-life-val">35 Años</div>
                                     </div>
                                 </div>
                             </div>
@@ -289,17 +276,17 @@
             <!-- 8. CRONOGRAMA MAESTRO -->
             <section data-background-image="./assets/blueprint_bg.png">
                 <div class="glass-panel dark" style="background: rgba(15, 23, 42, 0.95);">
-                    <h2 class="title-main"><i class="fa-solid fa-timeline" style="color:#38bdf8;"></i> Cronograma Hacia 2035</h2>
+                    <h2 class="title-main"><i class="fa-solid fa-timeline" style="color:#38bdf8;"></i> <span data-i18n="time-title">Cronograma Hacia 2035</span></h2>
                     
                     <div class="timeline-container" style="margin-top: 2.5rem;">
                         <div class="timeline-step">
                             <div class="timeline-year" style="color: #38bdf8;">2026 - 2027</div>
                             <div class="timeline-content card dark" style="border-top-color: #38bdf8;">
-                                <h4>Fase 1: Coordinación y Permisos</h4>
+                                <h4 data-i18n="time-f1-h">Fase 1: Coordinación y Permisos</h4>
                                 <ul class="feature-list text-sm" style="margin-top: 1rem;">
-                                    <li><strong>Coordinación (6M):</strong> Presentaciones y mesas de trabajo.</li>
-                                    <li><strong>Permisos (18M):</strong> Estudios Sitio & MIA Regional.</li>
-                                    <li><strong>Aprobación:</strong> Resolución favorable SEMARNAT y CONAGUA.</li>
+                                    <li data-i18n="time-f1-li1"><strong>Coordinación (6M):</strong> Presentaciones y mesas de trabajo.</li>
+                                    <li data-i18n="time-f1-li2"><strong>Permisos (18M):</strong> Estudios Sitio & MIA Regional.</li>
+                                    <li data-i18n="time-f1-li3"><strong>Aprobación:</strong> Resolución favorable SEMARNAT y CONAGUA.</li>
                                 </ul>
                             </div>
                         </div>
@@ -307,10 +294,10 @@
                         <div class="timeline-step">
                             <div class="timeline-year" style="color: #eab308;">2029 - 2030</div>
                             <div class="timeline-content card dark" style="border-top-color: #eab308;">
-                                <h4>Fase 2: Ingeniería y Cierre Financiero</h4>
+                                <h4 data-i18n="time-f2-h">Fase 2: Ingeniería y Cierre Financiero</h4>
                                 <ul class="feature-list text-sm" style="margin-top: 1rem;">
-                                    <li><strong>Ingeniería (24M):</strong> Ingeniería de Detalle y estructuración EPC.</li>
-                                    <li><strong>Fondos (12M):</strong> Cierre Financiero (Deuda y Equity).</li>
+                                    <li data-i18n="time-f2-li1"><strong>Ingeniería (24M):</strong> Ingeniería de Detalle y estructuración EPC.</li>
+                                    <li data-i18n="time-f2-li2"><strong>Fondos (12M):</strong> Cierre Financiero (Deuda y Equity).</li>
                                 </ul>
                             </div>
                         </div>
@@ -318,11 +305,11 @@
                         <div class="timeline-step">
                             <div class="timeline-year" style="color: #22c55e;">2031 - 2035</div>
                             <div class="timeline-content card dark" style="border-top-color: #22c55e;">
-                                <h4>Fase 3: Construcción y Operación</h4>
+                                <h4 data-i18n="time-f3-h">Fase 3: Construcción y Operación</h4>
                                 <ul class="feature-list text-sm" style="margin-top: 1rem;">
-                                    <li><strong>Obra Civil (24M):</strong> Obra Marina e Infraestructura base.</li>
-                                    <li><strong>Planta RO (24M):</strong> Montaje electromecánico y trenes de ósmosis.</li>
-                                    <li><strong>Operación (12M):</strong> Puesta en Marcha y entrega de proyecto.</li>
+                                    <li data-i18n="time-f3-li1"><strong>Obra Civil (24M):</strong> Obra Marina e Infraestructura base.</li>
+                                    <li data-i18n="time-f3-li2"><strong>Planta RO (24M):</strong> Montaje electromecánico y trenes de ósmosis.</li>
+                                    <li data-i18n="time-f3-li3"><strong>Operación (12M):</strong> Puesta en Marcha y entrega de proyecto.</li>
                                 </ul>
                             </div>
                         </div>
@@ -335,25 +322,24 @@
             <section data-background-image="./assets/modern_desalination_plant.png">
                 <div class="glass-panel" style="text-align: center; max-width: 800px; margin: 0 auto;">
                     <div style="font-size: 4rem; color: #0284c7; margin-bottom: 1rem;"><i class="fa-solid fa-handshake"></i></div>
-                    <h2 class="title-main" style="text-align: center;">Mesa de Trabajo Inicial</h2>
-                    <p class="text-lg" style="margin: 2rem 0; color: #334155; font-style: italic;">
+                    <h2 class="title-main" style="text-align: center;" data-i18n="close-title">Mesa de Trabajo Inicial</h2>
+                    <p class="text-lg" style="margin: 2rem 0; color: #334155; font-style: italic;" data-i18n="close-quote">
                         "Sonora y México deciden. Nosotros facilitamos, cumplimos y entregamos la seguridad hídrica
                         regional del futuro."
                     </p>
 
                     <div
                         style="background: rgba(13, 40, 71, 0.05); border-radius: 16px; padding: 2rem; margin-bottom: 2rem; text-align: left; border-left: 4px solid var(--secondary-color);">
-                        <h4 style="margin-top:0;"><i class="fa-solid fa-calendar-check"></i> Próximos Pasos (Mes 1):</h4>
+                        <h4 style="margin-top:0;"><i class="fa-solid fa-calendar-check"></i> <span data-i18n="close-next-steps">Próximos Pasos (Mes 1):</span></h4>
                         <ol style="font-size: 1.1rem; padding-left: 1.5rem;">
-                            <li>Reunión técnica presencial con el Ejecutivo de Sonora.</li>
-                            <li>Instalación de mesa de enlace operativo con SIDUR/SEMARNAT.</li>
+                            <li data-i18n="close-li1">Reunión técnica presencial con el Ejecutivo de Sonora.</li>
+                            <li data-i18n="close-li2">Instalación de mesa de enlace operativo con SIDUR/SEMARNAT.</li>
                         </ol>
                     </div>
 
-                    <a href="#" class="cta-btn"><i class="fa-solid fa-envelope-open-text"></i> Agendar Junta de Arranque</a>
+                    <a href="#" class="cta-btn"><i class="fa-solid fa-envelope-open-text"></i> <span data-i18n="btn-agenda">Agendar Junta de Arranque</span></a>
 
-                    <p class="text-sm" style="margin-top: 3rem; color: #94a3b8;"><i class="fa-solid fa-lock"></i> Acon Consulting © 2026 - Documento
-                        Confidencial</p>
+                    <p class="text-sm" style="margin-top: 3rem; color: #94a3b8;"><i class="fa-solid fa-lock"></i> <span data-i18n="footer-confidential">Acon Consulting © 2026 - Documento Confidencial</span></p>
                 </div>
             </section>
 
@@ -430,6 +416,246 @@
                 document.querySelectorAll('.data-panel.active').forEach(p => p.classList.remove('active'));
                 panel.classList.add('active');
             }
+        }
+
+        // Translation Data
+        const translations = {
+            'es': {
+                'badge-exec': 'Memorándum Ejecutivo',
+                'title-main': 'Colaboración Binacional Estratégica',
+                'p-subtitle': 'Proyecto Planta Desaladora Puerto Peñasco',
+                'label-from': 'De:',
+                'label-date': 'Fecha:',
+                'label-to': 'Para:',
+                'to-1': '🏛️ Gob. Alfonso Durazo Montaño (Estado de Sonora)',
+                'to-2': '🏛️ Pres. Mun. Alejandro Verdugo Angulo (P. Peñasco)',
+                'to-3': '🏛️ Autoridades Federales (SEMARNAT, CONAGUA, ZOFEMAT)',
+                'badge-context': 'El Contexto',
+                'context-title': 'Solución al Estrés Hídrico',
+                'context-p1': 'Una planta de 200 millones m³/año ubicada estratégicamente en el Golfo de California, estructurada bajo un esquema de intercambio.',
+                'context-li1': '<strong>Sonora:</strong> Abastecimiento directo para Hermosillo y P. Peñasco. Inversión y empleos masivos.',
+                'context-li2': '<strong>Arizona:</strong> Cubre el déficit del Río Colorado (~500k acres-pie). Recibe agua río arriba a cambio.',
+                'context-card-title': 'Ventaja Acon Consulting',
+                'context-card-p': 'Relaciones locales sólidas para agilizar permisos ambientales/estatales y control de tierras idóneas.',
+                'btn-impact': 'Ver Impacto Integral',
+                'panel-impact-title': 'Impacto Demográfico y Económico',
+                'panel-impact-p': 'Garantía de suministro crítico para el desarrollo de la franja fronteriza.',
+                'stat-pop-label': 'Población Beneficiada',
+                'stat-near-label': 'Empresas Nearshoring Aseguradas',
+                'stat-vol-label': 'Volumen (M3/Año)',
+                'stat-treaty-label': "Disputas TRATADO '44 Resueltas",
+                'badge-tech': 'Ingeniería de Punta',
+                'tech-title': 'Tecnología Sostenible (RO)',
+                'tech-li1': '<strong>Captación Submarina (1-3 km off shore):</strong> Pozos o sistemas de baja velocidad para minimizar captura de fauna.',
+                'tech-li2': '<strong>Ósmosis Inversa (60-70 bar):</strong> Membranas de última generación con Recuperación de Energía (ERD). PCH: 3.5 kWh/m³.',
+                'tech-li3': '<strong>Descarga de Salmuera (3-5 km offshore):</strong> Difusores Multiport de alta velocidad para dilución inmediata de 70,000 ppm.',
+                'btn-tech-spec': 'Ficha Técnica de Desempeño',
+                'panel-tech-title': 'Eficiencia Sistémica',
+                'panel-tech-p': 'Especificaciones operativas diseñadas para maximizar rendimiento y minimizar OPEX energético.',
+                'stat-salt-label': 'Rechazo de Sales (SWRO 4G)',
+                'stat-recovery-label': 'Recuperación de Energía (ERD)',
+                'stat-avail-label': 'Disponibilidad Planta',
+                'stat-chem-label': 'Uso Químico Reducido',
+                'badge-mgmt': 'Gestión',
+                'fed-title': 'Requerimientos Federales',
+                'fed-subtitle': 'Ruta Crítica hacia la Certidumbre',
+                'fed-card1-h': 'SEMARNAT (MIA Regional)',
+                'fed-card1-p': 'Requerimos consulta previa para establecer términos de referencia estrictos. Estudios batimétricos, de corrientes marinas y modelado de dispersión de salmuera para blindar ecológicamente el proyecto.',
+                'fed-card2-h': 'CONAGUA',
+                'fed-card2-p': 'Concesiones de Extracción y Permisos de Descarga. Integración binacional vía CILA para validar el esquema hídrico compensatorio con la cuenca del Río Colorado.',
+                'fed-card3-h': 'ZOFEMAT',
+                'fed-card3-p': 'Levantamiento de polígonos para concesión de toma y descarga submarina (30-50 años).',
+                'fed-card4-h': 'SEGOB / SRE',
+                'fed-card4-p': 'Garantizar que el Tratado beneficie primero la soberanía hídrica de México y respete normativas internacionales.',
+                'local-title': 'Requerimientos Locales',
+                'local-sonora-h': 'Gobierno de Sonora',
+                'local-sonora-p': 'Respaldamos la visión del Gobernador Durazo: los proyectos deben dejar derrama real en Sonora. Solicitamos:',
+                'local-sonora-li1': 'Declaración de interés estatal condicionado a rigurosidad de MIA.',
+                'local-sonora-li2': 'Mesa inter-secretarial (Economía, SIDUR).',
+                'local-sonora-li3': 'Registro comercial como inversión estratégica extranjera (~$5B USD).',
+                'local-penasco-h': 'Puerto Peñasco',
+                'local-penasco-p': 'Liderazgo transparente del Alc. Alejandro Verdugo:',
+                'local-penasco-li1': 'Licencias de construcción y uso de suelo industrial.',
+                'local-penasco-li2': 'Gestión con cooperativas pesqueras y sector hotelero.',
+                'local-penasco-li3': 'Programas directos de empleo (miles de plazas) y capacitación técnica.',
+                'badge-sust': 'Sustentabilidad Total',
+                'env-title': 'Haciendo Frente a los Retos',
+                'env-card1-h': 'Zona Ramsar (Bahía Adair)',
+                'env-card1-p': 'Respeto absoluto de humedales. Si el polígono entra en zona de riesgo, reubicaremos la planta al sur de la ciudad.',
+                'env-card2-h': 'Actividad Pesquera',
+                'env-card2-p': 'Toma/Descarga lejos del camarón/jaiba. Monitoreo en biología bentónica y compensaciones / arrecifes artificiales.',
+                'env-card3-h': 'Eficiencia y Cero Carbono',
+                'env-card3-p': 'Capacidad operativa conectada a macro-granjas solares en Sonora para bajar la huella de carbono térmica.',
+                'fin-title': 'Potencial Financiero (CAPEX & OPEX)',
+                'fin-subtitle': '~$5.0 Mil Millones USD de Inversión Inicial | LCOW Competitivo',
+                'fin-li1': '<strong>Construcción:</strong> ~3,000 Empleos Pico Generados (Derrama ~$1.3B)',
+                'fin-li2': '<strong>Operación:</strong> ~340 Mantenimiento/Admvo. Permanente',
+                'fin-li3': '<strong>Fiscal (30 años):</strong> Derrama en Impuestos Fed/Est/Mun excede los <strong>$1.5 B USD</strong>.',
+                'fin-li4': '<strong>Ratio Beneficio Costo Sonora:</strong> 30:1 en métricas base.',
+                'fin-card-p': '<strong>Deuda / Equity Mixto:</strong> WIFIA, Banca Comercial, Equity Privado y NADB/CAF respaldarán la viabilidad.',
+                'btn-roi': 'Desglose de Retorno (ROI)',
+                'panel-fin-title': 'Métricas de Rentabilidad',
+                'panel-fin-p': 'Estructura financiera blindada para grado de inversión con retornos garantizados por tarifas a largo plazo (PPA/WPA).',
+                'stat-irr-label': 'TIR Estimada (Equity)',
+                'stat-payback-label': 'Periodo Recuperación',
+                'stat-payback-val': '8.5 Años',
+                'stat-lcow-label': 'LCOW (Costo Nivelado)',
+                'stat-life-label': 'Vida Útil del Proyecto',
+                'stat-life-val': '35 Años',
+                'time-title': 'Cronograma Hacia 2035',
+                'time-f1-h': 'Fase 1: Coordinación y Permisos',
+                'time-f1-li1': '<strong>Coordinación (6M):</strong> Presentaciones y mesas de trabajo.',
+                'time-f1-li2': '<strong>Permisos (18M):</strong> Estudios Sitio & MIA Regional.',
+                'time-f1-li3': '<strong>Aprobación:</strong> Resolución favorable SEMARNAT y CONAGUA.',
+                'time-f2-h': 'Fase 2: Ingeniería y Cierre Financiero',
+                'time-f2-li1': '<strong>Ingeniería (24M):</strong> Ingeniería de Detalle y estructuración EPC.',
+                'time-f2-li2': '<strong>Fondos (12M):</strong> Cierre Financiero (Deuda y Equity).',
+                'time-f3-h': 'Fase 3: Construcción y Operación',
+                'time-f3-li1': '<strong>Obra Civil (24M):</strong> Obra Marina e Infraestructura base.',
+                'time-f3-li2': '<strong>Planta RO (24M):</strong> Montaje electromecánico y trenes de ósmosis.',
+                'time-f3-li3': '<strong>Operación (12M):</strong> Puesta en Marcha y entrega de proyecto.',
+                'close-title': 'Mesa de Trabajo Inicial',
+                'close-quote': '"Sonora y México deciden. Nosotros facilitamos, cumplimos y entregamos la seguridad hídrica regional del futuro."',
+                'close-next-steps': 'Próximos Pasos (Mes 1):',
+                'close-li1': 'Reunión técnica presencial con el Ejecutivo de Sonora.',
+                'close-li2': 'Instalación de mesa de enlace operativo con SIDUR/SEMARNAT.',
+                'btn-agenda': 'Agendar Junta de Arranque',
+                'footer-confidential': 'Acon Consulting © 2026 - Documento Confidencial'
+            },
+            'en': {
+                'badge-exec': 'Executive Memorandum',
+                'title-main': 'Strategic Binational Collaboration',
+                'p-subtitle': 'Puerto Peñasco Desalination Plant Project',
+                'label-from': 'From:',
+                'label-date': 'Date:',
+                'label-to': 'To:',
+                'to-1': '🏛️ Gov. Alfonso Durazo Montaño (State of Sonora)',
+                'to-2': '🏛️ Mayor Alejandro Verdugo Angulo (P. Peñasco)',
+                'to-3': '🏛️ Federal Authorities (SEMARNAT, CONAGUA, ZOFEMAT)',
+                'badge-context': 'The Context',
+                'context-title': 'Solution to Water Stress',
+                'context-p1': 'A 200 million m³/year plant strategically located in the Gulf of California, structured under an exchange scheme.',
+                'context-li1': '<strong>Sonora:</strong> Direct supply for Hermosillo and P. Peñasco. Massive investment and jobs.',
+                'context-li2': '<strong>Arizona:</strong> Covers the Colorado River deficit (~500k acre-feet). Receives water upstream in exchange.',
+                'context-card-title': 'Acon Consulting Advantage',
+                'context-card-p': 'Solid local relationships to streamline environmental/state permits and control ideal land.',
+                'btn-impact': 'View Integral Impact',
+                'panel-impact-title': 'Demographic and Economic Impact',
+                'panel-impact-p': 'Guarantee of critical supply for the development of the border strip.',
+                'stat-pop-label': 'Population Benefited',
+                'stat-near-label': 'Nearshoring Companies Secured',
+                'stat-vol-label': 'Volume (M3/Year)',
+                'stat-treaty-label': "'44 Treaty Disputes Resolved",
+                'badge-tech': 'Cutting-edge Engineering',
+                'tech-title': 'Sustainable Technology (RO)',
+                'tech-li1': '<strong>Submarine Intake (1-3 km off shore):</strong> Wells or low velocity systems to minimize fauna capture.',
+                'tech-li2': '<strong>Reverse Osmosis (60-70 bar):</strong> Latest generation membranes with Energy Recovery (ERD). PCH: 3.5 kWh/m³.',
+                'tech-li3': '<strong>Brine Discharge (3-5 km offshore):</strong> High velocity Multiport diffusers for immediate 70,000 ppm dilution.',
+                'btn-tech-spec': 'Performance Technical Sheet',
+                'panel-tech-title': 'Systemic Efficiency',
+                'panel-tech-p': 'Operational specifications designed to maximize performance and minimize energy OPEX.',
+                'stat-salt-label': 'Salt Rejection (SWRO 4G)',
+                'stat-recovery-label': 'Energy Recovery (ERD)',
+                'stat-avail-label': 'Plant Availability',
+                'stat-chem-label': 'Reduced Chemical Use',
+                'badge-mgmt': 'Management',
+                'fed-title': 'Federal Requirements',
+                'fed-subtitle': 'Critical Path towards Certainty',
+                'fed-card1-h': 'SEMARNAT (Regional MIA)',
+                'fed-card1-p': 'We require prior consultation to establish strict terms of reference. Bathymetric studies, ocean currents and brine dispersion modeling to ecologically shield the project.',
+                'fed-card2-h': 'CONAGUA',
+                'fed-card2-p': 'Extraction Concessions and Discharge Permits. Binational integration via IBWC to validate the compensatory water scheme with the Colorado River basin.',
+                'fed-card3-h': 'ZOFEMAT',
+                'fed-card3-p': 'Polygon survey for submarine intake and discharge concession (30-50 years).',
+                'fed-card4-h': 'SEGOB / SRE',
+                'fed-card4-p': 'Ensure that the Treaty benefits Mexico\'s water sovereignty first and respects international regulations.',
+                'local-title': 'Local Requirements',
+                'local-sonora-h': 'Sonora Government',
+                'local-sonora-p': 'We support Governor Durazo\'s vision: projects must leave a real impact in Sonora. We request:',
+                'local-sonora-li1': 'Declaration of state interest conditioned on MIA rigor.',
+                'local-sonora-li2': 'Inter-secretarial commission (Economy, SIDUR).',
+                'local-sonora-li3': 'Commercial registration as strategic foreign investment (~$5B USD).',
+                'local-penasco-h': 'Puerto Peñasco',
+                'local-penasco-p': 'Transparent leadership from Mayor Alejandro Verdugo:',
+                'local-penasco-li1': 'Construction licenses and industrial land use permits.',
+                'local-penasco-li2': 'Management with fishing cooperatives and the hotel sector.',
+                'local-penasco-li3': 'Direct employment programs (thousands of positions) and technical training.',
+                'badge-sust': 'Total Sustainability',
+                'env-title': 'Meeting the Challenges',
+                'env-card1-h': 'Ramsar Zone (Adair Bay)',
+                'env-card1-p': 'Absolute respect for wetlands. If the polygon enters a risk zone, we will relocate the plant south of the city.',
+                'env-card2-h': 'Fishing Activity',
+                'env-card2-p': 'Intake/Discharge far from shrimp/crab. Benthic biology monitoring and compensations / artificial reefs.',
+                'env-card3-h': 'Efficiency and Zero Carbon',
+                'env-card3-p': 'Operational capacity connected to solar macro-farms in Sonora to lower the thermal carbon footprint.',
+                'fin-title': 'Financial Potential (CAPEX & OPEX)',
+                'fin-subtitle': '~$5.0 Billion USD Initial Investment | Competitive LCOW',
+                'fin-li1': '<strong>Construction:</strong> ~3,000 Peak Jobs Generated (Economic impact ~$1.3B)',
+                'fin-li2': '<strong>Operation:</strong> ~340 Permanent Maintenance/Admin staff',
+                'fin-li3': '<strong>Tax (30 years):</strong> Fed/State/Mun tax impact exceeds <strong>$1.5 B USD</strong>.',
+                'fin-li4': '<strong>Sonora Benefit Cost Ratio:</strong> 30:1 in base metrics.',
+                'fin-card-p': '<strong>Mixed Debt / Equity:</strong> WIFIA, Commercial Banking, Private Equity and NADB/CAF will support viability.',
+                'btn-roi': 'Return Breakdown (ROI)',
+                'panel-fin-title': 'Profitability Metrics',
+                'panel-fin-p': 'Shielded financial structure for investment grade with returns guaranteed by long-term tariffs (PPA/WPA).',
+                'stat-irr-label': 'Estimated IRR (Equity)',
+                'stat-payback-label': 'Payback Period',
+                'stat-payback-val': '8.5 Years',
+                'stat-lcow-label': 'LCOW (Levelized Cost)',
+                'stat-life-label': 'Project Lifespan',
+                'stat-life-val': '35 Years',
+                'time-title': 'Master Schedule Towards 2035',
+                'time-f1-h': 'Phase 1: Coordination and Permitting',
+                'time-f1-li1': '<strong>Coordination (6M):</strong> Presentations and working groups.',
+                'time-f1-li2': '<strong>Permitting (18M):</strong> Site studies & Regional Environmental Impact Assessment (MIA).',
+                'time-f1-li3': '<strong>Approval:</strong> Favorable resolution from SEMARNAT and CONAGUA.',
+                'time-f2-h': 'Phase 2: Engineering and Financial Closing',
+                'time-f2-li1': '<strong>Engineering (24M):</strong> Detailed Engineering and EPC structuring.',
+                'time-f2-li2': '<strong>Funds (12M):</strong> Financial Closing (Debt and Equity).',
+                'time-f3-h': 'Phase 3: Construction and Operation',
+                'time-f3-li1': '<strong>Civil Works (24M):</strong> Marine Works and infrastructure base.',
+                'time-f3-li2': '<strong>RO Plant (24M):</strong> Electromechanical assembly and osmosis trains.',
+                'time-f3-li3': '<strong>Operation (12M):</strong> Commissioning and project handover.',
+                'close-title': 'Initial Working Group',
+                'close-quote': '"Sonora and Mexico decide. We facilitate, comply and deliver the regional water security of the future."',
+                'close-next-steps': 'Next Steps (Month 1):',
+                'close-li1': 'In-person technical meeting with the Executive of Sonora.',
+                'close-li2': 'Installation of operational liaison table with SIDUR/SEMARNAT.',
+                'btn-agenda': 'Schedule Kick-off Meeting',
+                'footer-confidential': 'Acon Consulting © 2026 - Confidential Document'
+            }
+        };
+
+        function switchLanguage(lang) {
+            const dictionary = translations[lang];
+            if (!dictionary) return;
+
+            // Update elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dictionary[key]) {
+                    // Preservation of icons in badges if any
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.innerHTML = '';
+                        el.appendChild(icon);
+                        el.appendChild(document.createTextNode(' ' + dictionary[key]));
+                    } else {
+                        el.textContent = dictionary[key];
+                    }
+                }
+            });
+
+            // Update UI
+            document.querySelectorAll('.flag-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('onclick').includes(lang)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update document language
+            document.documentElement.lang = lang;
         }
     </script>
 </body>
